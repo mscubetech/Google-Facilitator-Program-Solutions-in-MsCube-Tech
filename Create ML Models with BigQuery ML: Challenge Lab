@@ -1,11 +1,10 @@
 ===================================== Create ML Models with BigQuery ML: Challenge Lab ==============================================
 .
 .
+.
 ---------------------------------------1ST TASK ----------------------------------------
 
 bq mk austin
-
-
 
 -------------------------------------- 2ND TASK  ---------------------------------------
 
@@ -31,7 +30,6 @@ WHERE
 
 --------------------------------------3RD TASK ------------------------------------------
 
-
 CREATE OR REPLACE MODEL austin.subscriber_model
 OPTIONS
   (model_type='linear_reg', labels=['duration_minutes']) AS
@@ -42,8 +40,6 @@ SELECT
     duration_minutes
 FROM `bigquery-public-data.austin_bikeshare.bikeshare_trips` AS trips
 WHERE EXTRACT(YEAR FROM start_time) = <replace year>
-
-
 
 
 ------------------------------------ 2ND QUERY  -----------------------------------------
@@ -60,10 +56,9 @@ FROM `bigquery-public-data.austin_bikeshare.bikeshare_trips` AS trips
 WHERE EXTRACT(YEAR FROM start_time) = <replace year>
 
 
------------------------------------- 4TH TASK -------------------------------------------
+-------------------------------------- 4TH TASK -------------------------------------------
 
---------------------------- 1ST MODEL ---------------------
-
+------------------------ 1ST MODEL ---------------------
 
 -- Evaluation metrics for location_model
 SELECT
@@ -125,7 +120,6 @@ GROUP BY
   start_station_name
 ORDER BY
   trips DESC
-
 
 
 -------------------------2ND ONE -----------------------------
